@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="html">
+	<head>
+		<meta charset="UTF-8">
+		<title>Twitter</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+	<div class="container"><!--container general-->
+		<header><!--encabezado-->
+			<div class="row">
+				<div class="col-xs-12">
+					<h1 class="well text-center">TODO APP</h1>
+				</div>
+			</div>
+		</header><!--encabezado cierre-->
+		<section>
+			<div class="row"><!--area de texto-->
+				<div class="col-xs-12">
+					<textarea class="form-control" rows="10" placeholder="Añade tu nueva tarea" id="tareaNueva"></textarea>
+				</div>
+			</div><!--area de texto cierre-->
+			<div class="row"><!--boton agregar-->
+				<div class="col-xs-12">
+					<button class="glyphicon glyphicon-cog icon" onclick="agregarElemento()" id="btnAdd">Agregar</button>
+				</div>	
+			</div><!--boton agregar cierre-->
+			<div class="row">
+				<div class="col-xs-12" id="listaTareas">
+					<ul id="lista">
+  						<li>Hit the gym</li>
+  						<li class="checked">Pay bills</li>
+  						<li>Meet George</li>
+  						<li>Buy eggs</li>
+  						<li>Read a book</li>
+  						<li>Organize office</li>
+					</ul>	
+				</div>
+			</div>
+		</section>	
+	</div><!--container general cierre-->
+	<script type='text/javascript' src='js/main.js'></script>
+	<script src="bootstrap/js/jquery.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	</body>
+</html>
