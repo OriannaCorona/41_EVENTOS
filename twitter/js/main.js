@@ -1,42 +1,45 @@
-/*var tareas = [];
-function visualizarTarea() {
-	for (var i = 0; i < tareas.length; i++) {
-		listaTareas.innerHTML += "<p>" + tareas[i];
-	}
-}
-function agregarElemento() { 
-	tareas.push(tareaNueva.value);
-	visualizarTarea();
-}*/
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'li') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-
-function agregarElemento() {
+// Crear una nueva tarea al darle click en el boton "Agregar" con el input de check
+function agregarTarea() {
   var li = document.createElement("li");
-  var inputValor = document.getElementById("tareaNueva").value;
-  var t = document.createTextNode(inputValor);
-  li.appendChild(t);
-  if (inputValor === '') {
-    alert("You must write something!");
+  li.setAttribute("class", "list-group-item");
+  var check = document.createElement("input");
+  check.type = "checkbox";
+  var ul = document.getElementById("tareaNueva").value;
+  var texto = document.createTextNode(ul);
+  li.appendChild(check);
+  li.appendChild(texto);
+  if (ul === '') {
+    alert("Agrega tu tarea nueva c:");
   } else {
-    document.getElementById("lista").appendChild(li);
+    document.getElementById("listaTareas").appendChild(li);
   }
   document.getElementById("tareaNueva").value = "";
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "check-box";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
+//Crea los spans de info y el bote de basura 
+  var bote = document.createElement("SPAN");
+  bote.className = "glyphicon glyphicon-trash";
+  li.appendChild(bote);
+  var info = document.createElement("SPAN");
+  info.className = "glyphicon glyphicon-info-sign";
+  li.appendChild(info);
+//Elimina la tarea agregada
+  bote.onclick = function() {
+  	var div =this.parentElement;
+  	div.style.display = "none";
   }
+  info.onclick = function() {
+  	var div =this.parentElement;
+  	div.style.display = "none";
+  }
+  check.addEventListener("click", tacharTarea);
 }
+//Tachar la tarea realizada	
+function tacharTarea(){
+	var tache = this.parentElement;
+	if(this.checked){
+		tache.style.textDecoration = "line-through";	
+	}else{
+		tache.style.textDecoration = "none";
+	}	
+}
+
+

@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<title>Twitter</title>
 		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
@@ -23,18 +24,12 @@
 			</div><!--area de texto cierre-->
 			<div class="row"><!--boton agregar-->
 				<div class="col-xs-12">
-					<button class="glyphicon glyphicon-cog icon" onclick="agregarElemento()" id="btnAdd">Agregar</button>
+					<button class="glyphicon glyphicon-cog" onclick="agregarTarea()" id="btnAdd">Agregar</button>
 				</div>	
 			</div><!--boton agregar cierre-->
 			<div class="row">
-				<div class="col-xs-12" id="listaTareas">
-					<ul id="lista">
-  						<li>Hit the gym</li>
-  						<li class="checked">Pay bills</li>
-  						<li>Meet George</li>
-  						<li>Buy eggs</li>
-  						<li>Read a book</li>
-  						<li>Organize office</li>
+				<div class="col-xs-12">
+					<ul id="listaTareas" class="list-group">
 					</ul>	
 				</div>
 			</div>
