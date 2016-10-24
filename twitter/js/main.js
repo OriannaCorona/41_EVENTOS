@@ -23,13 +23,15 @@ function agregarTarea() {
   li.appendChild(info);
 //Elimina la tarea agregada
   bote.onclick = function() {
-  	var div =this.parentElement;
+  	var div = this.parentElement;
+  	//te dice a que elemento se le esta aplicando el evento
   	div.style.display = "none";
   }
   info.onclick = function() {
-  	var div =this.parentElement;
+  	var div = this.parentElement;
   	div.style.display = "none";
   }
+  //Con addEventListener se le da la instruccion que se ejecute la funcion cuando se lleve a cabo el evento
   check.addEventListener("click", tacharTarea);
 }
 //Tachar la tarea realizada	

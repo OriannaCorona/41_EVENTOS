@@ -1,0 +1,27 @@
+.fondo{
+	background-color: #99b5b9;
+	height: 500%;
+}
+.btnGuardar, .glyphicon-remove, .well{
+	color: white; 	
+}
+.btnGuardar{
+	border-radius: 5px 5px;
+	background-color: #b8ded3;
+	border: none;
+	padding: .5% 2%;	
+	margin: 2% 0%;	
+}
+.glyphicon-remove{
+	margin: 2% 2%;
+}
+input {
+	border-radius: 5px 5px;
+	border: solid 1px grey;
+}
+.inputNuevaLista{
+	display: block;
+}
+.well {
+	background-color: #d9baa6;
+}
