@@ -16,6 +16,7 @@ function desplegarBtnGuardar() {
   	var contenedor = document.getElementById("contenedor");
   	contenedor.replaceChild(caja, nombreLista);	  	
 //Para guardar una lista nueva
+	var inputLista = document.createElement("input");
 	btnGuardar.onclick = function crearListaNueva(e) {
 		var viejoDiv = e.target.parentElement;
 		var tituloLista = document.createTextNode(inputNuevaLista.value); 
@@ -23,27 +24,12 @@ function desplegarBtnGuardar() {
 		listaHecha.appendChild(tituloLista);
 	  	listaHecha.setAttribute("class", "listaHecha");
 	  	viejoDiv.parentElement.replaceChild(listaHecha, viejoDiv);
-	  	var inputLista = document.createElement("input");
-	  	var textoInput = document.createTextNode("Añadir una tarjeta...");
+	  	inputLista.placeholder = "Añadir una tarjeta..."; 
+	  	inputLista.className = "inputLista";
 		listaHecha.appendChild(inputLista);
-		inputLista.appendChild(textoInput);
-	  	document.getElementById("contenedor").appendChild(listaHecha);
-	  	 	
+	  	document.getElementById("contenedorDos").appendChild(listaHecha);
+	  	contenedor.appendChild(nombreLista);  	 	
 	}
+//Para guardar una tajeta nueva
+	
 }
-/*
-var li = document.createElement("li");
-  li.setAttribute("class", "list-group-item");
-  var check = document.createElement("input");
-  check.type = "checkbox";
-  var ul = document.getElementById("tareaNueva").value;
-  var texto = document.createTextNode(ul);
-  li.appendChild(check);
-  li.appendChild(texto);
-  if (ul === '') {
-    alert("Agrega tu tarea nueva c:");
-  } else {
-    document.getElementById("listaTareas").appendChild(li);
-  }
-  document.getElementById("tareaNueva").value = "";
-  */

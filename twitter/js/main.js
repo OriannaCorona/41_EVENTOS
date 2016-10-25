@@ -24,7 +24,7 @@ function agregarTarea() {
 //Elimina la tarea agregada
   bote.onclick = function() {
   	var div = this.parentElement;
-  	//te dice a que elemento se le esta aplicando el evento
+  	//te dice a que elemento se le esta aplicando el evento, como el target.
   	div.style.display = "none";
   }
   info.onclick = function() {
